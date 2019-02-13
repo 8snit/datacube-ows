@@ -21,9 +21,10 @@ WORKDIR /code
 ADD . .
 
 RUN pip3 install -r requirements.txt \
+    pip3 install -U aiobotocore[boto3] \
     && rm -rf $HOME/.cache/pip
 
-RUN pip3 install git+https://github.com/opendatacube/dea-proto.git@2da959d3747e4bb0db8025407220bb2589bbee10 \
+RUN pip3 install git+https://github.com/opendatacube/dea-proto.git@c425639a809e724fc617ad9c75bc7d97a80d6916 \
     && rm -rf $HOME/.cache/pip
 
 RUN python3 setup.py install

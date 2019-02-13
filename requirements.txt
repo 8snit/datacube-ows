@@ -1,3 +1,4 @@
+aiobotocore[boto3]
 pytest
 flask
 colour
@@ -8,7 +9,6 @@ eventlet
 gunicorn
 gunicorn[gevent]
 gunicorn[eventlet]
-boto3
 rasterio>=1.0.9
 ruamel.yaml
 prometheus-client
@@ -17,4 +17,3 @@ pytest-localserver
 pytest-mock
 requests
 watchdog
-aiohttp
